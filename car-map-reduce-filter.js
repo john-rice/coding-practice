@@ -17,4 +17,13 @@ let oldCars = cars.filter( (car) => {
     return car.year < 2019
 } )
 
-console.log( oldCars )
+// return an object for each car that includes the existing data as well 
+//  as a single full string property named `display`
+// for example '2012 ford fusion'
+let displayData = oldCars.map( (car) => {
+    let result = car
+    result.display = car.year + ' ' + car.make + ' ' + car.model
+    return result
+})  
+
+console.log( displayData )
